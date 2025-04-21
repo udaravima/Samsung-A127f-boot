@@ -62,6 +62,10 @@ make -j$(nproc)
   `sudo apt install bc xz-utils libssl-dev bison flex make python-is-python3`
 - If you get an error for ylloc in the dtc file
 - - navigate to `scripts/dtc/dtc-lexer.l` and add `extern` keyword in front of `LLTYPE ylloc;`
+  - 
+---
 
-You can use prepare script to prepare the enviroment
+### 🤖🤖 Automation: You can use prepare script to prepare the environment
+-  run `source prepare_work_SM127.sh`
+-  `source` will export global variable on current terminal without running on seperate thread
 ---
