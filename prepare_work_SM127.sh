@@ -93,6 +93,11 @@ export ARCH=arm64
 # Link toolchain directory inside build dir for convenience
 ln -sfv "$TOOLCHAIN_DIR" "$WORKDIR/"
 
+echo ">> DOS 2 UNIX warning mitigation!"
+echo "I hope u are using Linux..."
+dos2unix ${WORKDIR}/drivers/sensorhub/debug/Kconfig
+dos2unix ${WORKDIR}/drivers/sensorhub/sensorhub/Kconfig 
+
 echo
 echo ">> Build environment ready!"
 echo ">> To build kernel for Samsung A127F:"
