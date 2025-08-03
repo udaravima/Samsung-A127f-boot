@@ -97,7 +97,8 @@ ln -sfv "$TOOLCHAIN_DIR" "$WORKDIR/"
 echo -e "\n\e[1;32m>>> DOS 2 UNIX warning mitigation!\e[0m"
 echo -e "\e[1;33mI hope u are using Linux...\e[0m"
 dos2unix ${WORKDIR}/drivers/sensorhub/debug/Kconfig
-dos2unix ${WORKDIR}/drivers/sensorhub/sensorhub/Kconfig 
+dos2unix ${WORKDIR}/drivers/sensorhub/sensorhub/Kconfig
+dos2unix ${WORKDIR}/drivers/vision/npu/Kconfig
 
 echo
 echo -e "\n\e[1;32m>> Build environment ready!\e[0m"
