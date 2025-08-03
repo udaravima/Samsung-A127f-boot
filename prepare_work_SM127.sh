@@ -23,6 +23,7 @@ mkdir -p "$WORKDIR"
 if [[ ! -f Kernel.tar.gz || ! -f Platform.tar.gz ]]; then
 	echo "!! Missing Kernel.tar.gz and/or Platform.tar.gz"
 	echo ">> Please download them from https://opensource.samsung.com"
+ 	read -p "Press enter to exit..."
 	exit 1
 fi
 
@@ -54,6 +55,7 @@ if [[ ! -f "$CLANG_DIR/bin/clang" ]]; then
 	if [[ $? -ne 0 ]]; then
 		echo "!! Failed to download Clang toolchain!"
 		echo ">> Please download it manually and place it under: $CLANG_DIR"
+ 		read -p "Press enter to exit..."
 		exit 1
 	fi
 
@@ -72,6 +74,7 @@ if [[ ! -f "$GCC_DIR/bin/aarch64-linux-android-gcc" ]]; then
 	if [[ $? -ne 0 ]]; then
 		echo "!! Failed to clone GCC toolchain!"
 		echo ">> Please check your internet connection or download manually."
+ 		read -p "Press enter to exit..."
 		exit 1
 	fi
 
@@ -96,3 +99,4 @@ echo ">> To build kernel for Samsung A127F:"
 echo "   cd $WORKDIR"
 echo "   make exynos850-a12snsxx_defconfig"
 echo "   make -j\$(nproc)"
+read -p "Press enter to exit..."
